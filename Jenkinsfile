@@ -32,6 +32,12 @@ pipeline {
             sleep(time: 20, unit: 'SECONDS')
           }
         }
+        stage('Checkpoint') {
+          agent none
+          steps {
+            checkpoint 'Checkpoint'
+       }
+      }
       }
     }
   }
